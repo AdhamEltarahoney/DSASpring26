@@ -1,0 +1,83 @@
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node / general JS tooling (harmless if unused)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyd
+*.pyo
+*.pytest_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.pytype/
+.pyre/
+.env
+.venv
+venv/
+env/
+
+# C/C++ / build artifacts
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.a
+*.lib
+*.ilk
+*.pch
+*.pdb
+*.idb
+*.mod
+*.smod
+*.d
+*.gcno
+*.gcda
+*.gcov
+build/
+dist/
+cmake-build-*/
+
+# IDE / editors
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Logs / misc
+*.log
+logs/
+*.tmp
+*.temp
+
+# Git
+.gitignore.local
