@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class DLinkedList; // forward declaration
+
+class DNode {
+private:
+    int data;       // ONLY integers
+    DNode* prev;
+    DNode* next;
+    friend class DLinkedList;
+};
+
+class DLinkedList {
+public:
+    DLinkedList();
+    ~DLinkedList();
+
+    bool empty() const;
+    int front() const;
+    int back() const;
+
+    void addFront(int x);
+    void addBack(int x);
+    void removeFront();
+    void removeBack();
+
+    void printForward() const;
+    void printBackward() const;
+
+private:
+    DNode* header;   // front sentinel
+    DNode* trailer;  // back sentinel
+
+    void add(DNode* v, int x); // insert before v
+    void remove(DNode* v);     // remove node v
+};
+
+// ---- Implementation ----
+
+DLinkedList::DLinkedList() {
+    header = new DNode;
+    trailer = new DNode;
+
+    header->next = trailer;
+    header->prev = nullptr;
+
+    trailer->prev = header;
+    trailer->next = nullptr;
+}
+
+DLinkedList::~DLinkedList() {
+    while (!empty()) {
+        removeFront();
+    }
+    delete header;
+    delete trailer;
+}
